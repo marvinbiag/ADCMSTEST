@@ -15,6 +15,7 @@ public class ConsultationFragmentAdapter extends FragmentPagerAdapter {
     // 2 - Default Constructor
     public ConsultationFragmentAdapter(FragmentManager mgr) {
         super(mgr);
+
     }
 
     @Override

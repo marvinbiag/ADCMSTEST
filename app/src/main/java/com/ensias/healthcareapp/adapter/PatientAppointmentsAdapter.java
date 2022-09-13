@@ -1,6 +1,5 @@
 package com.ensias.healthcareapp.adapter;
 
-import android.app.AlertDialog;
 import android.graphics.Color;
 import android.net.Uri;
 import android.util.Log;
@@ -10,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ensias.healthcareapp.ProfilePatientActivity;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.ensias.healthcareapp.R;
 import com.ensias.healthcareapp.model.ApointementInformation;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -22,19 +23,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
-
-import java.util.concurrent.Executor;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
-import dmax.dialog.SpotsDialog;
 
 public class PatientAppointmentsAdapter extends FirestoreRecyclerAdapter<ApointementInformation, PatientAppointmentsAdapter.PatientAppointmentsHolder> {
     StorageReference pathReference;

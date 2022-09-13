@@ -1,6 +1,5 @@
 package com.ensias.healthcareapp;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -157,6 +156,7 @@ public class DoctorAdapterFiltred  extends RecyclerView.Adapter<DoctorAdapterFil
                 mTubeListFiltered = (ArrayList<Doctor>) results.values;
                 notifyDataSetChanged();
             }
+
         };
     }
     class DoctoreHolder2 extends RecyclerView.ViewHolder {
@@ -180,4 +180,5 @@ public class DoctorAdapterFiltred  extends RecyclerView.Adapter<DoctorAdapterFil
         Intent i = new Intent(wf, TestActivity.class);
         wf.startActivity(i);
     }
+
 }

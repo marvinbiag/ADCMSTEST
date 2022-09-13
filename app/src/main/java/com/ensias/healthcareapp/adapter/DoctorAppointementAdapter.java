@@ -1,5 +1,6 @@
 package com.ensias.healthcareapp.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -41,6 +42,8 @@ public class DoctorAppointementAdapter extends FirestoreRecyclerAdapter<Apointem
         super(options);
     }
 
+    //@SuppressWarnings("deprecation")
+    @SuppressLint("RecyclerView")
     @Override
     protected void onBindViewHolder(@NonNull MyDoctorAppointementHolder myDoctorAppointementHolder, int position, @NonNull final ApointementInformation apointementInformation) {
         myDoctorAppointementHolder.dateAppointement.setText(apointementInformation.getTime());

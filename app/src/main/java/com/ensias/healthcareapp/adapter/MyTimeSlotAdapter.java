@@ -1,5 +1,6 @@
 package com.ensias.healthcareapp.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -60,6 +61,7 @@ public class MyTimeSlotAdapter extends RecyclerView.Adapter<MyTimeSlotAdapter.My
         return new MyViewHolder(itemView);
     }
 
+    @SuppressLint("RecyclerView")
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         holder.txt_time_slot.setText(new StringBuilder(Common.convertTimeSlotToString(position)).toString());
