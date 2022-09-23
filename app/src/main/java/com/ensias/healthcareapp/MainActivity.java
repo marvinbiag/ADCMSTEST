@@ -1,5 +1,7 @@
 package com.ensias.healthcareapp;
 
+import static com.ensias.healthcareapp.R.string.default_web_client_id;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken(getString(default_web_client_id))
                 .requestEmail()
                 .build();
        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -246,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
                                     }else{
                                         Intent k = new Intent(MainActivity.this, DoctorHomeActivity.class);
                                         startActivity(k);
-                                        //Snackbar.make(findViewById(R.id.main_layout), "Doctor interface entraint de realisation", Snackbar.LENGTH_SHORT).show();
+                                        Snackbar.make(findViewById(R.id.main_layout), "Doctor interface entraint de realisation", Snackbar.LENGTH_SHORT).show();
                                     }
                                 }
                             });
